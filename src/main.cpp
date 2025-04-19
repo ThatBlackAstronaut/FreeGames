@@ -12,6 +12,7 @@
 #include "Meltdown/MeltdownSelectLayer.h"
 #include "SubZero/SubZeroSelectLayer.h"
 #include "World/ownWorldSelectLayer.h"
+#include <Geode/cocos/layers_scenes_transitions_nodes/CCTransition.h>
 
 using namespace geode::prelude;
 
@@ -515,7 +516,7 @@ class $modify(EndLevelLayer) {
 
 			int colorID = 0;
 			auto worldScene = WorldSelectLayer::create(0);
-			// Crear la escena para Android directamente con el índice correspondiente
+			// Crear la escena para Android directamente con el Ã­ndice correspondiente
 			if (levelID > 2000 && levelID < 2006) {
 				worldScene = WorldSelectLayer::create(0);
 				colorID = 4;
