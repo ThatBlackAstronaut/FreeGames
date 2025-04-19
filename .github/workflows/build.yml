@@ -42,8 +42,8 @@ jobs:
         uses: geode-sdk/build-geode-mod@main
         with:
           sdk: nightly
-          bindings: iArtie/bindings
-          bindings-ref: main
+          # bindings: iArtie/bindings
+          # bindings-ref: main
           combine: true
           export-pdb: true
           target: ${{ matrix.config.target }}
