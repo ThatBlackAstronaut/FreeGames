@@ -1,4 +1,7 @@
 # MoreGames Changelog
+## v1.0.9 (2025-04-19)
+- iOS and Mac support!
+
 ## v1.0.8 (2025-01-17)
 - Big code optimization!
 - SpinOffs levels added on leveltools! (this fix the android crash)
