@@ -68,7 +68,22 @@ class $modify(LoadingLayer)
 		unzipDir = geode::Mod::get()->getResourcesDir().string() + "/" + "SpinOffGames";
 
 #endif
+#ifdef GEODE_IS_MACOS
 
+
+        zipFilePath = geode::Mod::get()->getResourcesDir().string() + "/" + "SpinOffGames.zip";
+
+        unzipDir = geode::Mod::get()->getResourcesDir().string() + "/" + "SpinOffGames";
+
+#endif
+#ifdef GEODE_IS_IOS
+
+
+        zipFilePath = geode::Mod::get()->getResourcesDir().string() + "/" + "SpinOffGames.zip";
+
+        unzipDir = geode::Mod::get()->getResourcesDir().string() + "/" + "SpinOffGames";
+
+#endif
 		auto result = geode::utils::file::Unzip::intoDir(zipFilePath, unzipDir);
 		
 		CCFileUtils::get()->addTexturePack(CCTexturePack{
