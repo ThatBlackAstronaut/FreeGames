@@ -416,6 +416,46 @@ class $modify(PauseLayer) {
 			CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(0.5, scene));
 #endif
 
+#ifdef GEODE_IS_MACOS
+
+			int colorID = 0;
+
+			
+			if (levelID > 2000 && levelID < 2006) {
+				specificWorldScene->m_scrollLayer->instantMoveToPage(0);
+				colorID = 4;
+			}
+			else if (levelID > 2005 && levelID < 2011) {
+				specificWorldScene->m_scrollLayer->instantMoveToPage(1);
+				colorID = 6;
+			}
+
+			specificWorldScene->m_background->setColor(GameManager::sharedState()->colorForIdx(colorID));
+			scene->addChild(specificWorldScene);
+			CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(0.5, scene));
+
+#endif
+
+#ifdef GEODE_IS_IOS
+
+			int colorID = 0;
+
+			
+			if (levelID > 2000 && levelID < 2006) {
+				specificWorldScene->m_scrollLayer->instantMoveToPage(0);
+				colorID = 4;
+			}
+			else if (levelID > 2005 && levelID < 2011) {
+				specificWorldScene->m_scrollLayer->instantMoveToPage(1);
+				colorID = 6;
+			}
+
+			specificWorldScene->m_background->setColor(GameManager::sharedState()->colorForIdx(colorID));
+			scene->addChild(specificWorldScene);
+			CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(0.5, scene));
+
+#endif
+
 			
 			
 			/*CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(0.5, scene));*/
