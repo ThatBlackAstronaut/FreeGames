@@ -12,6 +12,7 @@
 #include "Meltdown/MeltdownSelectLayer.h"
 #include "SubZero/SubZeroSelectLayer.h"
 #include "World/ownWorldSelectLayer.h"
+#include <Geode/cocos/layers_scenes_transitions_nodes/CCTransition.h>
 
 using namespace geode::prelude;
 
@@ -288,7 +289,7 @@ class $modify(GJGarageLayer) {
 			 //page 3 is bug bc BoomScrollLayer is sucks
 			}
 
-			auto transition = CCTransitionMoveInT::create(0.31f, scene);
+			auto transition = CCTransitionMoveInB::create(0.31f, scene);
 
 		
 			CCActionInterval* moveDown = CCMoveBy::create(0.5f, ccp(0, -winSize.height));
